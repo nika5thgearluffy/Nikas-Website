@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html class="client-js ve-available" lang="en" dir="ltr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Extra Settings JSON Layout</title>
+<style>
+.mw-editfont-monospace{font-family:monospace,monospace}.mw-editfont-sans-serif{font-family:sans-serif}.mw-editfont-serif{font-family:serif} .mw-editfont-monospace,.mw-editfont-sans-serif,.mw-editfont-serif{  font-size:13px;  -moz-tab-size:4; tab-size:4; }.mw-editfont-monospace.oo-ui-textInputWidget,.mw-editfont-sans-serif.oo-ui-textInputWidget,.mw-editfont-serif.oo-ui-textInputWidget{font-size:inherit}.mw-editfont-monospace.oo-ui-textInputWidget > .oo-ui-inputWidget-input,.mw-editfont-sans-serif.oo-ui-textInputWidget > .oo-ui-inputWidget-input,.mw-editfont-serif.oo-ui-textInputWidget > .oo-ui-inputWidget-input{  font-size:13px}.mw-editfont-monospace.oo-ui-textInputWidget > input.oo-ui-inputWidget-input,.mw-editfont-sans-serif.oo-ui-textInputWidget > input.oo-ui-inputWidget-input,.mw-editfont-serif.oo-ui-textInputWidget > input.oo-ui-inputWidget-input{min-height:32px}
+.ve-init-mw-progressBarWidget{height:1em;overflow:hidden;margin:0 25%}.ve-init-mw-progressBarWidget-bar{height:1em;width:0} .ve-init-mw-progressBarWidget{background-color:#fff;box-sizing:border-box;height:0.875em;border:1px solid #36c;border-radius:0.875em;box-shadow:0 1px 1px rgba(0,0,0,0.15)}.ve-init-mw-progressBarWidget-bar{background-color:#36c;height:0.875em}
+@media screen {
+	.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;font-size:94%}}</style><style>
+.ve-init-mw-tempWikitextEditorWidget{border:0;padding:0;color:inherit;line-height:1.5em;width:100%;-moz-tab-size:4;tab-size:4; }.ve-init-mw-tempWikitextEditorWidget:focus{outline:0;padding:0}.ve-init-mw-tempWikitextEditorWidget::selection{background:rgba(109,169,247,0.5); }</style><style>
+.ve-active .ve-init-mw-desktopArticleTarget-editableContent #toc,.ve-active #siteNotice,.ve-active .mw-indicators,.ve-active #t-print,.ve-active #t-permalink,.ve-active #p-coll-print_export,.ve-active #t-cite,.ve-active .ve-init-mw-desktopArticleTarget-editableContent,.ve-active .ve-init-mw-tempWikitextEditorWidget{display:none}.ve-deactivating .ve-ui-surface{display:none}.ve-activating{ }.ve-activating .ve-ui-surface{height:0;padding:0 !important; overflow:hidden} .ve-loading #content > :not(.ve-init-mw-desktopArticleTarget-toolbarPlaceholder),.ve-activated .ve-init-mw-desktopArticleTarget-uneditableContent{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;opacity:0.5}.ve-activated #firstHeading{ -webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text;pointer-events:auto;cursor:text}.ve-activated #firstHeading a{ pointer-events:none}.ve-activated #catlinks{cursor:pointer}.ve-activated #catlinks:hover{ background:#e9f2fd}.ve-activated #catlinks a{opacity:1}.ve-activated #content{position:relative} .ve-init-mw-desktopArticleTarget-loading-overlay{z-index:2;position:absolute;width:100%;top:1em}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder{overflow:hidden;transition:height 250ms ease;height:0;padding-bottom:2px; }.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-bar{transform:translateY(-100%);transition:transform 250ms ease}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-open .ve-init-mw-desktopArticleTarget-toolbarPlaceholder-bar{transform:translateY(0)}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-floating{transition:none}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-floating .ve-init-mw-desktopArticleTarget-toolbarPlaceholder-bar{position:fixed;top:0;z-index:1;background:#fff} .oo-ui-element-hidden{display:none !important; } .mw-editsection{ unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection:before{content:'\200B'}.mw-editsection a{white-space:nowrap}.mw-editsection-divider{color:#54595d} .ve-init-mw-desktopArticleTarget-toolbarPlaceholder-bar{height:42px;border-bottom:1px solid #c8ccd1;box-shadow:0 1px 1px 0 rgba(0,0,0,0.1)}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-floating,.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-open{height:42px} .ve-init-mw-desktopArticleTarget-toolbar,.ve-init-mw-desktopArticleTarget-toolbarPlaceholder{font-size:0.875em;margin:-1.42857143em -0.57142857em 1.42857143em -0.57142857em}.skin-vector-legacy .ve-init-mw-desktopArticleTarget-toolbar,.skin-vector-legacy .ve-init-mw-desktopArticleTarget-toolbarPlaceholder{ margin:-1.14em -1.14em 1.14em -1.14em; }@media screen and (min-width:982px){.skin-vector-legacy .ve-init-mw-desktopArticleTarget-toolbar,.skin-vector-legacy .ve-init-mw-desktopArticleTarget-toolbarPlaceholder{ margin:-1.43em -1.71em 1.43em -1.71em}}.ve-init-mw-desktopArticleTarget-toolbarPlaceholder-floating{margin-top:0;margin-bottom:0}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Extra_Settings_JSON_Layout_files/load.css">
+<meta name="generator" content="MediaWiki 1.38.2">
+<meta name="format-detection" content="telephone=no">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Extra_Settings_JSON_Layout rootpage-Extra_Settings_JSON_Layout skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading">Extra Settings JSON Layout</h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">Originally from <a rel="nofollow" href="https://wohlsoft.ru/pgewiki/Extra_Settings_JSON_Layout">https://wohlsoft.ru/pgewiki/Extra_Settings_JSON_Layout</a></div>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p><b>Extra Settings JSON Layout</b> - Is a special file which is used to declare set of extra propertes for your element in the config pack.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Specification"><span class="tocnumber">1</span> <span class="toctext">Specification</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Root"><span class="tocnumber">1.1</span> <span class="toctext">Root</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Control_element"><span class="tocnumber">1.2</span> <span class="toctext">Control element</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Control:_spinBox"><span class="tocnumber">1.3</span> <span class="toctext">Control: spinBox</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Control:_checkBox"><span class="tocnumber">1.4</span> <span class="toctext">Control: checkBox</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Control:_color"><span class="tocnumber">1.5</span> <span class="toctext">Control: color</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Control:_comboBox"><span class="tocnumber">1.6</span> <span class="toctext">Control: comboBox</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Control:_flagBox"><span class="tocnumber">1.7</span> <span class="toctext">Control: flagBox</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Control:_lineEdit"><span class="tocnumber">1.8</span> <span class="toctext">Control: lineEdit</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Control:_multiLineEdit"><span class="tocnumber">1.9</span> <span class="toctext">Control: multiLineEdit</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Control:_file"><span class="tocnumber">1.10</span> <span class="toctext">Control: file</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Control:_musicFile"><span class="tocnumber">1.11</span> <span class="toctext">Control: musicFile</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Control:_soundFile"><span class="tocnumber">1.12</span> <span class="toctext">Control: soundFile</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Control:_levelFile"><span class="tocnumber">1.13</span> <span class="toctext">Control: levelFile</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Control:_itemSelect"><span class="tocnumber">1.14</span> <span class="toctext">Control: itemSelect</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Control:_description"><span class="tocnumber">1.15</span> <span class="toctext">Control: description</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Control:_sizeBox"><span class="tocnumber">1.16</span> <span class="toctext">Control: sizeBox</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Control:_pointBox"><span class="tocnumber">1.17</span> <span class="toctext">Control: pointBox</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Control:_rectBox"><span class="tocnumber">1.18</span> <span class="toctext">Control: rectBox</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Control:_Group_of_controls_(sub-tree)"><span class="tocnumber">1.19</span> <span class="toctext">Control: Group of controls (sub-tree)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Example_layout"><span class="tocnumber">2</span> <span class="toctext">Example layout</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Example_of_settings_dump"><span class="tocnumber">3</span> <span class="toctext">Example of settings dump</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Specification">Specification</span></h2>
+<p>The full specification of Extra Settings Layout. JSON file you are 
+creating must be saved in UTF8 encoding, so you must use NotePad-- or 
+SciTE, since the encoding is forced to save in UTF-8 BOM with Windows 
+NotePad.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:275px;"><img alt="" src="Extra_Settings_JSON_Layout_files/PGE-ExtraSettings-Example-Groupbox.png" decoding="async" width="273" height="605" class="thumbimage"><div class="thumbcaption">Group box style</div></div></div>
+<h3><span class="mw-headline" id="Root">Root</span></h3>
+<ul><li><b>style</b> - string, Defines the type of layout
+<ul><li>frame - Same as groupbox, but without border and without title</li>
+<li>groupbox - Show extra settings as GUI elements</li></ul></li>
+<li><b>title</b> - string, Defines the title of extra settings layout box</li>
+<li><b>layout</b> - array, Contains list of control elements are will be presented on the layout</li></ul>
+<h3><span class="mw-headline" id="Control_element">Control element</span></h3>
+<ul><li><b>control</b> - <b>[REQUIRED]</b>, string, type of control.</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li></ul>
+<h3><span class="mw-headline" id="Control:_spinBox">Control: spinBox</span></h3>
+<p>Gives integer or decimal setting.
+</p>
+<ul><li><b>control</b> - must be set to "spinBox" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li></ul>
+<ul><li><b>type</b> - <b>[REQUIRED]</b>, string, Type of value: integer or decimal:
+<ul><li><b>int</b> - Integer type</li>
+<li><b>double</b> - Decimal type</li></ul></li></ul>
+<ul><li><b>value-default</b> - <b>[REQUIRED]</b>, integer/decimal, Initial value of this control</li>
+<li><b>value-min</b> - <b>[Optional]</b>, integer/decimal, Minimal allowed value</li>
+<li><b>value-max</b> - <b>[Optional]</b>, integer/decimal, Maximal allowed value</li>
+<li><b>single-step</b> - <b>[Optional]</b>, integer/decimal, Size of one value change step, done by mouse wheel or arrow buttons on the control</li>
+<li><b>decimals</b> - <b>[Optional]</b>, integer, Precission of the decimal number value</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_checkBox">Control: checkBox</span></h3>
+<p>Gives boolean settings.
+</p>
+<ul><li><b>control</b> - must be set to "checkBox" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, boolean (`true` or `false`), Initial value of this control</li>
+<li><b>text-at-left</b> - <b>[Optional]</b>, boolean (`true` or `false`), Show the text at the left side of a checkbox</li></ul>
+<h3><span class="mw-headline" id="Control:_color">Control: color</span></h3>
+<p>Gives color settings.
+</p>
+<ul><li><b>control</b> - must be set to "color" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, a hex color (`#RRGGBB`, or `#RRGGBBAA`, or constant color name, etc. <a rel="nofollow" class="external text" href="http://doc.qt.io/qt-5/qcolor.html#setNamedColor">that approvable by QColor</a>), Initial value of this control</li>
+<li><b>alpha-channel</b> - <b>[Optional]</b>, boolean (`true` or `false`), Enable or disable using of an alpha-channel (true by default)</li>
+<li><b>placeholder</b> - <b>[Optional]</b>, string, a gray text shown in the empty field</li></ul>
+<p><b>Quote from Qt documentation related to color string format</b>
+</p><p>Sets the RGB value of this QColor to name, which may be in one of these formats:
+</p>
+<ul><li>#RGB (each of R, G, and B is a single hex digit)</li>
+<li>#RRGGBB</li>
+<li>#AARRGGBB (Since 5.2)</li>
+<li>#RRRGGGBBB</li>
+<li>#RRRRGGGGBBBB</li>
+<li>A name from the list of colors defined in the list of SVG color 
+keyword names provided by the World Wide Web Consortium; for example, 
+"steelblue" or "gainsboro". These color names work on all platforms. 
+Note that these color names are not the same as defined by the <a rel="nofollow" class="external text" href="http://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::GlobalColor</a> enums, e.g. "green" and Qt::green does not refer to the same color.</li>
+<li>transparent - representing the absence of a color.</li></ul>
+<p>The color is invalid if name cannot be parsed.
+</p>
+<h3><span class="mw-headline" id="Control:_comboBox">Control: comboBox</span></h3>
+<p>Gives an indexed labeled list of settings.
+</p>
+<ul><li><b>control</b> - must be set to "comboBox" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>elements</b> - <b>[REQUIRED]</b>, array of strings, Elements for choice.</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, integer, Initial value of this control, index of element in the given list</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_flagBox">Control: flagBox</span></h3>
+<p>Gives a group of boolean settings are stored as integer and indexed bitwisely per bit at left.
+</p>
+<ul><li><b>control</b> - must be set to "flagBox" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>elements</b> - <b>[REQUIRED]</b>, array of strings, Elements for choice.</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, integer, Initial value of this control, a bitwise mask of all flags are set or unset.</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_lineEdit">Control: lineEdit</span></h3>
+<p>Gives a single-line text string setting.
+</p>
+<ul><li><b>control</b> - must be set to "lineEdit" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, string, Initial value of this control.</li>
+<li><b>max-length</b> - <b>[Optional]</b>, integer, String length limitation. If not defined, string length is not limited.</li>
+<li><b>validator</b>  - <b>[Optional]</b>, string, Regular Expression which stricts specific string format that must be typed into this field.</li>
+<li><b>placeholder</b> - <b>[Optional]</b>, string, a gray text shown in the empty field</li>
+<li><b>read-only</b> - <b>[Optional]</b>, boolean (`true` or `false`), set this field as read-only</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_multiLineEdit">Control: multiLineEdit</span></h3>
+<p>Gives a multi-line text string setting.
+</p>
+<ul><li><b>control</b> - must be set to "multiLineEdit" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, string, Initial value of this control.</li>
+<li><b>read-only</b> - <b>[Optional]</b>, boolean (`true` or `false`), set this field as read-only</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_file">Control: file</span></h3>
+<p>Gives a string field with a file choosing button
+</p>
+<ul><li><b>control</b> - must be set to "file" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, string, Initial value of this control.</li>
+<li><b>directory</b> - <b>[Optional]</b>, "episode" or "data", a root 
+directory to list files: episode or level/world data (episode is a 
+default), file browser can't go upper than this directory</li>
+<li><b>directory-relative</b> - <b>[Optional]</b>, "episode" or "data", an initial root directory to list files (data is a default), it should be equal or lower than root</li>
+<li><b>dialog-title</b> - <b>[Optional]</b>, string, Title of the file selection dialog</li>
+<li><b>dialog-description</b> - <b>[Optional]</b>, string, Description label on the file selection dialog</li>
+<li><b>filters<i> - </i></b><i>[Optional]'</i>, array of strings, A list of filename filters to show (default is ["*.*"])</li></ul>
+<h3><span class="mw-headline" id="Control:_musicFile">Control: musicFile</span></h3>
+<p>Gives a string field with a music file choosing button and play button for a preview
+</p>
+<ul><li><b>control</b> - must be set to "musicFile" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, string, Initial value of this control.</li>
+<li><b>directory</b> - <b>[Optional]</b>, "episode" or "data", a root 
+directory to list files: episode or level/world data (episode is a 
+default), file browser can't go upper than this directory</li>
+<li><b>directory-relative</b> - <b>[Optional]</b>, "episode" or "data", an initial root directory to list files (data is a default), it should be equal or lower than root</li>
+<li><b>dialog-title</b> - <b>[Optional]</b>, string, Title of the file selection dialog</li>
+<li><b>dialog-description</b> - <b>[Optional]</b>, string, Description label on the file selection dialog</li>
+<li><b>filters<i> - </i></b><i>[Optional]'</i>, array of strings, A list of filename filters to show (default is a built-in list of supported music formats)</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_soundFile">Control: soundFile</span></h3>
+<p>Gives a string field with a sound effect file choosing button and play button for a preview
+</p>
+<ul><li><b>control</b> - must be set to "soundFile" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, string, Initial value of this control.</li>
+<li><b>directory</b> - <b>[Optional]</b>, "episode" or "data", a root 
+directory to list files: episode or level/world data (episode is a 
+default), file browser can't go upper than this directory</li>
+<li><b>directory-relative</b> - <b>[Optional]</b>, "episode" or "data", an initial root directory to list files (data is a default), it should be equal or lower than root</li>
+<li><b>dialog-title</b> - <b>[Optional]</b>, string, Title of the file selection dialog</li>
+<li><b>dialog-description</b> - <b>[Optional]</b>, string, Description label on the file selection dialog</li>
+<li><b>filters<i> - </i></b><i>[Optional]'</i>, array of strings, A list of filename filters to show (default is a built-in list of supported SFX formats)</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_levelFile">Control: levelFile</span></h3>
+<p>Gives a string field with a level file choosing button
+</p>
+<ul><li><b>control</b> - must be set to "levelFile" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, string, Initial value of this control.</li>
+<li><b>directory</b> - <b>[Optional]</b>, "episode" or "data", a root 
+directory to list files: episode or level/world data (episode is a 
+default), file browser can't go upper than this directory</li>
+<li><b>directory-relative</b> - <b>[Optional]</b>, "episode" or "data", an initial root directory to list files (episode is a default), it should be equal or lower than root</li>
+<li><b>dialog-title</b> - <b>[Optional]</b>, string, Title of the file selection dialog</li>
+<li><b>dialog-description</b> - <b>[Optional]</b>, string, Description label on the file selection dialog</li>
+<li><b>filters<i> - </i></b><i>[Optional]'</i>, array of strings, A list of filename filters to show (default is a built-in list of supported level file formats)</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_itemSelect">Control: itemSelect</span></h3>
+<p>Gives a button to select one of game elements
+</p>
+<ul><li><b>control</b> - must be set to "itemSelect" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>type</b> - <b>[REQUIRED]</b>, "block", "bgo", "npc", "npcOrCoins", "terrain", "scenery", "path", "level", A type of a game element to select.</li>
+<li><b>value-default</b> - <b>[REQUIRED]</b>, string, Initial value of this control.</li></ul>
+<h3><span class="mw-headline" id="Control:_description">Control: description</span></h3>
+<p>A non-editable block of HTML-formatted text
+</p>
+<ul><li><b>control</b> - must be set to "description" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li>
+<li><b>text</b> - <b>[REQUIRED]</b>, string, An HTML text that will be shown on the box. Any clickable URLs can be added here.</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_sizeBox">Control: sizeBox</span></h3>
+<p>Gives a group of two integer or decimal settings are labeled as Width and Height.
+</p>
+<ul><li><b>control</b> - must be set to "sizeBox" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li></ul>
+<ul><li><b>type</b> - <b>[REQUIRED]</b>, string, Type of value: integer or decimal:
+<ul><li><b>int</b> - Integer type</li>
+<li><b>double</b> - Decimal type</li></ul></li></ul>
+<ul><li><b>value-default</b> - <b>[REQUIRED]</b>, object, Initial value of this control
+<ul><li><b>w</b> - <b>[REQUIRED]</b>, integer/decimal, Width value</li>
+<li><b>h</b> - <b>[REQUIRED]</b>, integer/decimal, Height value</li></ul></li></ul>
+<ul><li><b>value-min</b> - <b>[Optional]</b>, object, Minimal allowed value
+<ul><li><b>w</b> - <b>[REQUIRED]</b>, integer/decimal, Width value</li>
+<li><b>h</b> - <b>[REQUIRED]</b>, integer/decimal, Height value</li></ul></li></ul>
+<ul><li><b>value-max</b> - <b>[Optional]</b>, object, Maximal allowed value
+<ul><li><b>w</b> - <b>[REQUIRED]</b>, integer/decimal, Width value</li>
+<li><b>h</b> - <b>[REQUIRED]</b>, integer/decimal, Height value</li></ul></li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_pointBox">Control: pointBox</span></h3>
+<p>Gives a group of two integer or decimal settings are labeled as X and Y.
+</p>
+<ul><li><b>control</b> - must be set to "pointBox" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li></ul>
+<ul><li><b>type</b> - <b>[REQUIRED]</b>, string, Type of value: integer or decimal:
+<ul><li><b>int</b> - Integer type</li>
+<li><b>double</b> - Decimal type</li></ul></li></ul>
+<ul><li><b>value-default</b> - <b>[REQUIRED]</b>, object, Initial value of this control
+<ul><li><b>x</b> - <b>[REQUIRED]</b>, integer/decimal, X position value</li>
+<li><b>y</b> - <b>[REQUIRED]</b>, integer/decimal, Y position value</li></ul></li></ul>
+<ul><li><b>value-min</b> - <b>[Optional]</b>, object, Minimal allowed value
+<ul><li><b>x</b> - <b>[REQUIRED]</b>, integer/decimal, X position value</li>
+<li><b>y</b> - <b>[REQUIRED]</b>, integer/decimal, Y position value</li></ul></li></ul>
+<ul><li><b>value-max</b> - <b>[Optional]</b>, object, Maximal allowed value
+<ul><li><b>x</b> - <b>[REQUIRED]</b>, integer/decimal, X position value</li>
+<li><b>y</b> - <b>[REQUIRED]</b>, integer/decimal, Y position value</li></ul></li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Control:_rectBox">Control: rectBox</span></h3>
+<p>Gives a group of four integer or decimal settings are labeled as X, Y, Width, and Height.
+</p>
+<ul><li><b>control</b> - must be set to "rectBox" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li>
+<li><b>title</b> - <b>[REQUIRED]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>tooltip</b> - <b>[Optional]</b>, string, Pop-up hint that appears on mouse hover</li></ul>
+<ul><li><b>type</b> - <b>[REQUIRED]</b>, string, Type of value: integer or decimal:
+<ul><li><b>int</b> - Integer type</li>
+<li><b>double</b> - Decimal type</li></ul></li></ul>
+<ul><li><b>value-default</b> - <b>[REQUIRED]</b>, object, Initial value of this control
+<ul><li><b>x</b> - <b>[REQUIRED]</b>, integer/decimal, X position value</li>
+<li><b>y</b> - <b>[REQUIRED]</b>, integer/decimal, Y position value</li>
+<li><b>w</b> - <b>[REQUIRED]</b>, integer/decimal, Width value</li>
+<li><b>h</b> - <b>[REQUIRED]</b>, integer/decimal, Height value</li></ul></li></ul>
+<ul><li><b>value-min</b> - <b>[Optional]</b>, object, Minimal allowed value
+<ul><li><b>x</b> - <b>[REQUIRED]</b>, integer/decimal, X position value</li>
+<li><b>y</b> - <b>[REQUIRED]</b>, integer/decimal, Y position value</li>
+<li><b>w</b> - <b>[REQUIRED]</b>, integer/decimal, Width value</li>
+<li><b>h</b> - <b>[REQUIRED]</b>, integer/decimal, Height value</li></ul></li></ul>
+<ul><li><b>value-max</b> - <b>[Optional]</b>, object, Maximal allowed value
+<ul><li><b>x</b> - <b>[REQUIRED]</b>, integer/decimal, X position value</li>
+<li><b>y</b> - <b>[REQUIRED]</b>, integer/decimal, Y position value</li>
+<li><b>w</b> - <b>[REQUIRED]</b>, integer/decimal, Width value</li>
+<li><b>h</b> - <b>[REQUIRED]</b>, integer/decimal, Height value</li></ul></li></ul>
+<p><br>
+</p>
+<h3><span id="Control:_Group_of_controls_.28sub-tree.29"></span><span class="mw-headline" id="Control:_Group_of_controls_(sub-tree)">Control: Group of controls (sub-tree)</span></h3>
+<p>Gives you a sub-tree of elements.
+</p>
+<ul><li><b>control</b> - must be set to "group" (case insensitive)</li>
+<li><b>name</b> - <b>[REQUIRED]</b>, string, Name of data field accessible from the Lua API.</li></ul>
+<dl><dd><table class="wikitable" style="background-color:#F0F0E7;" cellpadding="10">
+<tbody><tr>
+<td><b>Note:</b>
+ If you will set the name field to have the two dots value "..", all 
+children settings data will be recorded in a dump in a current branch 
+without creation of a new named branch.
+</td></tr></tbody></table></dd></dl>
+<ul><li><b>title</b> - <b>[REQUIRED if the name is NOT equal to ".."]</b>, string, Understandible name of field will be shown in the Editor.</li>
+<li><b>children</b>  - <b>[REQUIRED]</b>, array, Child controls are included into this group.</li></ul>
+<h2><span class="mw-headline" id="Example_layout">Example layout</span></h2>
+<p>An example layout
+</p>
+<div class="mw-highlight mw-highlight-lang-json mw-content-ltr" dir="ltr"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="nt">"style"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"tree"</span><span class="p">,</span><span class="w"></span>
+<span class="w">	</span><span class="nt">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Sample setup"</span><span class="p">,</span><span class="w"></span>
+<span class="w">	</span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spinBox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testNumber"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test integer number value"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"tooltip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Testing integer value number to test this control"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-min"</span><span class="p">:</span><span class="w"> </span><span class="mi">-42</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-max"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"single-step"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"checkbox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"checkMe"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check me"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"tooltip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"It's one best control to check it"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"checkbox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"checkMeNot"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Don't check me, jerk"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"tooltip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oh, no, suggested to never touch this..."</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"combobox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Choose me"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"zero"</span><span class="p">,</span><span class="w"> </span><span class="s2">"one"</span><span class="p">,</span><span class="w"> </span><span class="s2">"two"</span><span class="p">,</span><span class="w"> </span><span class="s2">"three"</span><span class="p">,</span><span class="w"> </span><span class="s2">"four"</span><span class="p">],</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"flagbox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Choose of:"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"zero"</span><span class="p">,</span><span class="w"> </span><span class="s2">"one"</span><span class="p">,</span><span class="w"> </span><span class="s2">"two"</span><span class="p">,</span><span class="w"> </span><span class="s2">"three"</span><span class="p">,</span><span class="w"> </span><span class="s2">"four"</span><span class="p">],</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sizebox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sizeOfMyPlant"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Size of?"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-min"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"h"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-max"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">  </span><span class="nt">"h"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">},</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="nt">"h"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sizebox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"double"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"decimals"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"floatingBrick"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floating brick"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-min"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="nt">"h"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">2.0</span><span class="p">},</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-max"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mf">42.0</span><span class="p">,</span><span class="w">  </span><span class="nt">"h"</span><span class="p">:</span><span class="w"> </span><span class="mf">42.1</span><span class="p">},</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mf">41.52</span><span class="p">,</span><span class="w"> </span><span class="nt">"h"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">34.2</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pointBox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"whereIsMySombrero"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Where?"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"x"</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="nt">"y"</span><span class="p">:</span><span class="mi">12</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pointBox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"double"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"decimals"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"floatOfWhere"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Float Where?"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"x"</span><span class="p">:</span><span class="mf">12.02</span><span class="p">,</span><span class="w"> </span><span class="nt">"y"</span><span class="p">:</span><span class="mf">-12.1</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectBox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iCanSeeYou"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rects, Rects.... rects!!!"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"x"</span><span class="p">:</span><span class="mi">-12</span><span class="p">,</span><span class="w"> </span><span class="nt">"y"</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="nt">"w"</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="nt">"h"</span><span class="p">:</span><span class="mi">12</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectBox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"double"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"decimals"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fanSeeYou"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Floating rects!"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"x"</span><span class="p">:</span><span class="mf">-1.02</span><span class="p">,</span><span class="w"> </span><span class="nt">"y"</span><span class="p">:</span><span class="mf">34.0</span><span class="p">,</span><span class="w"> </span><span class="nt">"w"</span><span class="p">:</span><span class="mf">12.054</span><span class="p">,</span><span class="w"> </span><span class="nt">"h"</span><span class="p">:</span><span class="mf">12.11</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spinBox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"double"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"floatTest"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test floating number value"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-min"</span><span class="p">:</span><span class="w"> </span><span class="mf">-42.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"value-max"</span><span class="p">:</span><span class="w"> </span><span class="mf">42.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"single-step"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"decimals"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alienTrash"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Some alien trash"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"children"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spinBox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"child1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Kek"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"value-min"</span><span class="p">:</span><span class="w"> </span><span class="mi">-42</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"value-max"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
+<span class="w">				</span><span class="p">},</span><span class="w"></span>
+<span class="w">				</span><span class="p">{</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lineEdit"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"child2"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Pek"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"max-length"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"validator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^a\\ me\\dw$"</span><span class="w"></span>
+<span class="w">				</span><span class="p">},</span><span class="w"></span>
+<span class="w">				</span><span class="p">{</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lineEdit"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"child3"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Tek"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"max-length"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="w">				</span><span class="p">}</span><span class="w"></span>
+<span class="w">			</span><span class="p">]</span><span class="w"></span>
+<span class="w">		</span><span class="p">},</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"someAnother"</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Another..."</span><span class="p">,</span><span class="w"></span>
+<span class="w">			</span><span class="nt">"children"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"control"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spinBox"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kekVision"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Kek"</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"value-default"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"value-min"</span><span class="p">:</span><span class="w"> </span><span class="mi">-42</span><span class="p">,</span><span class="w"></span>
+<span class="w">					</span><span class="nt">"value-max"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="w"></span>
+<span class="w">				</span><span class="p">}</span><span class="w"></span>
+<span class="w">			</span><span class="p">]</span><span class="w"></span>
+<span class="w">		</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<h2><span class="mw-headline" id="Example_of_settings_dump">Example of settings dump</span></h2>
+<p>An example settings dump generated from given sample. 
+</p>
+<dl><dd><table class="wikitable" style="background-color:#F0F0E7;" cellpadding="10">
+<tbody><tr>
+<td><b>Note:</b> Keep an attention that fields are not appearing in this dump until a first change in a settings was made.
+<p>So, to deal with these values, follow next tips:
+</p>
+<ul><li>If dump is blank - treat all values by their defaults</li>
+<li>When dump is here and it has missing fields - treat any missing fields by their defaults</li>
+<li>Please validate values in the dump to avoid errors caused by old dumps are left after changes without field renaming</li></ul>
+</td></tr></tbody></table></dd></dl>
+<div class="mw-highlight mw-highlight-lang-json mw-content-ltr" dir="ltr"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"alienTrash"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"child1"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"child2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a me9w"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"child3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1t4t1"</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"checkMe"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"checkMeNot"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"choice"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"choice2"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"fanSeeYou"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"h"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.11</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.054</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-1.05224</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"floatOfWhere"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.02</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-12.104</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"floatTest"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.6999999999999993</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"floatingBrick"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"h"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.2</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.22</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"iCanSeeYou"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"h"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">-64</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"sizeOfMyPlant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"h"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"w"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"someAnother"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"kekVision"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"testNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"whereIsMySombrero"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">-35</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+</div>
+
+</body></html>

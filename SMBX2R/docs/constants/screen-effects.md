@@ -1,0 +1,23 @@
+# Screen effect constants
+
+Used to describe section screen effects.
+
+| Constant | Value |
+| --- | --- |
+| SEFFECT_NONE | 0 |
+| SEFFECT_WAVY | 1 |
+| SEFFECT_LAVA | 2 |
+| SEFFECT_CAUSTICS | 3 |
+| SEFFECT_UNDERWATER | 4 |
+| SEFFECT_MIST | 5 |
+| SEFFECT_SEPIA | 6 |
+| SEFFECT_GRAYSCALE | 7 |
+| SEFFECT_INVERTED | 8 |
+| SEFFECT_GAMEBOY | 9 |
+| SEFFECT_DITHERED_GAMEBOY | 10 |
+| SEFFECT_SIMPLE_CAUSTICS | 11 |
+| SEFFECT_SIMPLE_UNDERWATER | 12 |
+| SEFFECT_AURORA | 13 |
+| SEFFECT_LIGHTBEAMS | 14 |
+| SEFFECT_RETRO | 15 |
+| SEFFECT_DREAM | 16 |

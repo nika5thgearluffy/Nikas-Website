@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <title>SMBX2 Documentation</title>
+    <link rel="stylesheet" href="_docute/docute.css" integrity="sha384-1RBAwS+bNeQyFWe4Y+6J5EBj8WXxbSBB5Psh0GZiQ28oz02aRS8YGShy8Wg6t0Rj" crossorigin="anonymous">
+    <link rel="stylesheet" href="easingExt.css">
+  </head>
+  <body>
+    <div id="docute"></div>
+    <script src="_docute/docute.js"></script>
+	<script src="_docute/marked.min.js"></script>
+    <script src="customTablesExt.js"></script>
+    <script src="audioExt.js"></script>
+    <script src="easingExt.js"></script>
+	<script src="searchExt.js"></script>
+	<script src="randomPageExt.js"></script>
+    <script>
+
+      new Docute({
+	    highlight: ['lua', 'ini', 'json', 'glsl'],
+		plugins: [ customTablesExt, audioExt, easingExt, searchExt, randomPageExt ],
+        target: '#docute',
+		detectSystemDarkTheme: true,
+		darkThemeToggler: 'sidebar',
+		editLinkBase: 'https://github.com/nika5thgearluffy/smbx2r-documentation/',
+		editLinkText: 'See documentation repo',
+		theme: 'dark',
+		sidebar: [
+		{
+		  title: 'Home',
+		  link: '/'
+		},
+		{
+		  title: 'General',
+		  children: [
+			  {
+			      title: 'What is SMBX2?',
+				  link: '/general/introduction'
+			  },
+			  {
+			      title: 'Installation',
+				  link: '/general/installation'
+			  },
+			  {
+			      title: 'Editor',
+				  link: '/general/editor'
+			  },
+			  {
+			      title: 'Upcoming features',
+				  link: '/general/upcoming'
+			  },
+		  ]
+		},
+		{
+			title: 'Non-scripting features',
+			children: [
+				{
+					title: 'Achievements',
+					link: '/features/achievements'
+				},
+				{
+					title: 'BGO Config',
+					link: '/features/bgo-config'
+				},
+				{
+					title: 'Block Config',
+					link: '/features/block-config'
+				},
+				{
+					title: 'Cheats',
+					link: '/features/cheats'
+				},
+				{
+					title: 'Command Line Arguments',
+					link: '/features/command-line'
+				},
+				{
+					title: 'Effect Config',
+					link: '/features/effect-config'
+				},
+				{
+					title: 'F-Keys',
+					link: '/features/f-keys'
+				},
+				{
+					title: 'Launcher Pages',
+					link: '/features/launcher'
+				},
+				{
+					title: 'Level Settings',
+					link: '/features/level-settings'
+				},
+				{
+					title: 'Light Config',
+					link: '/features/light-config'
+				},
+				{
+					title: 'NPC Config',
+					link: '/features/npc-config'
+				},
+				{
+					title: 'Parallaxing Backgrounds',
+					link: '/features/parallaxing-backgrounds'
+				},
+				{
+					title: 'Player Sprite Offsets',
+					link: '/features/player-sprite-offsets'
+				},
+				{
+					title: 'Section Settings',
+					link: '/features/section-settings'
+				},
+				{
+					title: 'Templates Folder',
+					link: '/features/templates-folder'
+				},
+				{
+					title: 'Test Mode',
+					link: '/features/test-mode'
+				}
+			]
+		},
+		{
+			title: 'Classes',
+			children: [
+				{
+					title: 'Achievements',
+					link: '/reference/achievements'
+				},
+				{
+					title: 'Audio',
+					link: '/reference/audio'
+				},
+				{
+					title: 'BGO class',
+					link: '/reference/bgo'
+				},
+				{
+					title: 'Block class',
+					link: '/reference/block'
+				},
+				{
+					title: 'Camera',
+					link: '/reference/camera'
+				},
+				{
+					title: 'Cheats',
+					link: '/reference/cheats'
+				},
+				{
+					title: 'Checkpoint class',
+					link: '/reference/checkpoint'
+				},
+				{
+					title: 'Colliders',
+					link: '/reference/Colliders'
+				},
+				{
+					title: 'Color',
+					link: '/reference/Color'
+				},
+				{
+					title: 'Console',
+					link: '/reference/console'
+				},
+				{
+					title: 'Darkness',
+					link: '/reference/darkness'
+				},
+				{
+					title: 'Defines',
+					link: '/reference/defines'
+				},
+				{
+					title: 'Effect class',
+					link: '/reference/effect'
+				},
+				{
+					title: 'Events class',
+					link: '/reference/events'
+				},
+				{
+					title: 'Explosion class',
+					link: '/reference/explosion'
+				},
+				{
+					title: 'Globals',
+					link: '/reference/globals'
+				},
+				{
+					title: 'Global Memory',
+					link: '/reference/global-memory'
+				},
+				{
+					title: 'Graphics',
+					link: '/reference/graphics'
+				},
+				{
+					title: 'Layer class',
+					link: '/reference/layer'
+				},
+				{
+					title: 'LegacyRNG class',
+					link: '/reference/legacyrng'
+				},
+				{
+					title: 'Level class (Levels)',
+					link: '/reference/level-levels'
+				},
+				{
+					title: 'Level class (Overworld)',
+					link: '/reference/level-overworld'
+				},
+				{
+					title: 'Liquid class',
+					link: '/reference/liquid'
+				},
+				{
+					title: 'Lunalua Events',
+					link: '/reference/lunalua-events'
+				},
+				{
+					title: 'Lunatime class',
+					link: '/reference/lunatime'
+				},
+				{
+					title: 'Math class',
+					link: '/reference/math'
+				},
+				{
+					title: 'Misc class',
+					link: '/reference/misc'
+				},
+				{
+					title: 'Musicbox class',
+					link: '/reference/musicbox'
+				},
+				{
+					title: 'NPC AI',
+					link: '/reference/npc-ai'
+				},
+				{
+					title: 'NPC class',
+					link: '/reference/npc'
+				},
+				{
+					title: 'Path class',
+					link: '/reference/path'
+				},
+				{
+					title: 'Player class',
+					link: '/reference/player'
+				},
+				{
+					title: 'Playersettings class',
+					link: '/reference/playersettings'
+				},
+				{
+					title: 'Progress',
+					link: '/reference/progress'
+				},
+				{
+					title: 'RNG class',
+					link: '/reference/rng'
+				},
+				{
+					title: 'Routine',
+					link: '/reference/Routine'
+				},
+				{
+					title: 'Scenery class',
+					link: '/reference/scenery'
+				},
+				{
+					title: 'Section',
+					link: '/reference/section'
+				},
+				{
+					title: 'SFX',
+					link: '/reference/SFX'
+				},
+				{
+					title: 'Sprite class',
+					link: '/reference/sprite'
+				},
+				{
+					title: 'Text class',
+					link: '/reference/text'
+				},
+				{
+					title: 'Tile class',
+					link: '/reference/tile'
+				},
+				{
+					title: 'Timer',
+					link: '/reference/timer'
+				},
+				{
+					title: 'Transform',
+					link: '/reference/Transform'
+				},
+				{
+					title: 'Vector',
+					link: '/reference/vector'
+				},
+				{
+					title: 'Warp class',
+					link: '/reference/warp'
+				},
+				{
+					title: 'World class',
+					link: '/reference/world'
+				},
+			]
+		},
+		{
+			title: 'Modules',
+			children: [
+				{
+					title: 'autoscroll.lua',
+					link: '/modules/autoscroll'
+				},
+				{
+					title: 'bettereffects.lua',
+					link: '/modules/bettereffects'
+				},
+				{
+					title: 'blockutils.lua',
+					link: '/modules/blockutils'
+				},
+				{
+					title: 'camlock.lua',
+					link: '/modules/camlock'
+				},
+				{
+					title: 'clearpipe.lua',
+					link: '/modules/clearpipe'
+				},
+				{
+					title: 'configTypes.lua',
+					link: '/modules/configTypes'
+				},
+				{
+					title: 'currencies.lua',
+					link: '/modules/currencies'
+				},
+				{
+					title: 'ext/easing.lua',
+					link: '/modules/easing'
+				},
+				{
+					title: 'effectconfig.lua',
+					link: '/modules/effectconfig'
+				},
+				{
+					title: 'handycam.lua',
+					link: '/modules/handycam'
+				},
+				{
+					title: 'hudoverride.lua',
+					link: '/modules/hudoverride'
+				},
+				{
+					title: 'lakitushop.lua',
+					link: '/modules/lakitushop'
+				},
+				{
+					title: 'lib3d.lua',
+					link: '/modules/lib3d'
+				},
+				{
+					title: 'playermanager.lua',
+					link: '/modules/playermanager'
+				},
+				{
+					title: 'npcutils.lua',
+					link: '/modules/npcutils'
+				},
+				{
+					title: 'switchcolors.lua',
+					link: '/modules/switchcolors'
+				},
+				{
+					title: 'textplus.lua',
+					link: '/modules/textplus'
+				},
+				{
+					title: 'xmem.lua',
+					link: '/modules/xmem'
+				},
+			]
+		},
+		{
+			title: 'Constants',
+			children: [
+				{
+					title: 'Directions',
+					link: '/constants/direction'
+				},
+				{
+					title: 'Field Types',
+					link: '/constants/memory-field-types'
+				},
+				{
+					title: 'Level Victory',
+					link: '/constants/level-victory'
+				},
+				{
+					title: 'NPC Harm Types',
+					link: '/constants/enemy-harm-types'
+				},
+				{
+					title: 'Player/NPC Forced State',
+					link: '/constants/forced-state'
+				},
+				{
+					title: 'Player Characters',
+					link: '/constants/characters'
+				},
+				{
+					title: 'Player Key Codes',
+					link: '/constants/keycode'
+				},
+				{
+					title: 'Player Keys',
+					link: '/constants/playerkeys'
+				},
+				{
+					title: 'Player Mounts',
+					link: '/constants/mounts'
+				},
+				{
+					title: 'Player Powerups',
+					link: '/constants/powerups'
+				},
+				{
+					title: 'Render Type',
+					link: '/constants/render-type'
+				},
+				{
+					title: 'Score',
+					link: '/constants/score'
+				},
+				{
+					title: 'Screen Effects',
+					link: '/constants/screen-effects'
+				},
+				{
+					title: 'SMBX Versions',
+					link: '/constants/smbx-version'
+				},
+				{
+					title: 'Weather Effects',
+					link: '/constants/weather-effects'
+				},
+				{
+					title: 'World HUD State',
+					link: '/constants/world-hud-state'
+				},
+			]
+		},
+		{
+			title: 'Concepts',
+			children: [
+				{
+					title: 'Audio File Formats',
+					link: '/concepts/audio-file-formats'
+				},
+				{
+					title: 'Coordinate Spaces',
+					link: '/concepts/coordinate-spaces'
+				},
+				{
+					title: 'Collision Groups',
+					link: '/concepts/collision-groups'
+				},
+				{
+					title: 'Custom Assets',
+					link: '/concepts/custom-assets'
+				},
+				{
+					title: 'Custom Range',
+					link: '/concepts/custom-range'
+				},
+				{
+					title: 'Data Table',
+					link: '/concepts/data-table'
+				},
+				{
+					title: 'Editor Configurations',
+					link: '/concepts/editor-configurations'
+				},
+				{
+					title: 'Extra Settings',
+					link: '/concepts/extra-settings'
+				},
+				{
+					title: 'Iterators',
+					link: '/concepts/iterators'
+				},
+				{
+					title: 'Level/Episode Folder',
+					link: '/concepts/level-episode-folder'
+				},
+				{
+					title: 'Libraries',
+					link: '/concepts/libraries'
+				},
+				{
+					title: 'Load Screen Environment',
+					link: '/concepts/loadscreen'
+				},
+				{
+					title: 'Object Files',
+					link: '/concepts/object-files'
+				},
+				{
+					title: 'Render Priority',
+					link: '/concepts/render-priority'
+				},
+				{
+					title: 'SaveData and GameData',
+					link: '/concepts/savedata-gamedata'
+				},
+				{
+					title: 'SFX List',
+					link: '/concepts/sfx-list'
+				},
+				{
+					title: 'Ticks',
+					link: '/concepts/ticks'
+				},
+				{
+					title: 'vararg',
+					link: '/concepts/vararg'
+				},
+			]
+		},
+		{
+			title: 'Types',
+			children: [
+				{
+					title: 'bool',
+					link: '/types/bool'
+				},
+				{
+					title: 'Event Token',
+					link: '/types/Event'
+				},
+				{
+					title: 'function',
+					link: '/types/function'
+				},
+				{
+					title: 'MixChunk',
+					link: '/types/MixChunk'
+				},
+				{
+					title: 'nil',
+					link: '/types/nil'
+				},
+				{
+					title: 'number',
+					link: '/types/number'
+				},
+				{
+					title: 'object',
+					link: '/types/object'
+				},
+				{
+					title: 'RECT',
+					link: '/types/rect'
+				},
+				{
+					title: 'Shader',
+					link: '/types/Shader'
+				},
+				{
+					title: 'string',
+					link: '/types/string'
+				},
+				{
+					title: 'table',
+					link: '/types/table'
+				},
+				{
+					title: 'Texture',
+					link: '/types/texture'
+				},
+				{
+					title: 'WeightContainer',
+					link: '/types/weightcontainer'
+				},
+			]
+		},
+		{
+			title: 'Guides',
+			children: [
+				{
+					title: 'Common warnings',
+					link: '/guides/warnings'
+				},
+				{
+					title: 'Common NPC Questions',
+					link: '/guides/common-npc-questions'
+				},
+				{
+					title: 'Contributing to the docs',
+					link: '/guides/contributing-to-the-docs'
+				},
+				{
+					title: 'How to: Using Draw Functions',
+					link: '/guides/how-to-using-draw-functions'
+				},
+				{
+					title: 'How to: Custom entities',
+					link: '/guides/how-to-custom-entities'
+				}
+			]
+		}
+		],
+		footer: `
+		<div style="border-top:1px solid var(--border-color);padding-top:30px;margin: 40px 0;color:#999999;font-size: .9rem;">
+		Released under <a href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a>.
+		</div>
+		`
+      })
+    </script>
+  </body>
+</html>
